@@ -17,9 +17,9 @@ This is a Python script for the Adobe Analytics API, which allows you to:
 
 ### Authentication
 
-This project connects to the Adobe APIs using Server-toServer OAuth authentication. See the [Adobe documentation](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation/) for information on how to generate a private key and obtain your API credentials.
+This project connects to the Adobe APIs using Server-toServer OAuth authentication. See the [Adobe documentation](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation/) for information on how to set up a project and obtain your API credentials.
 
-When that is done, you'll need to create a config.json file containing your Adobe Analytics API credentials:
+When that is done, you'll need to create a config.json file containing your Adobe API credentials:
 
 ```json
 {
@@ -29,7 +29,8 @@ When that is done, you'll need to create a config.json file containing your Adob
   "scopes": "comma, separated, list, of, scopes"
 }
 ```
-NOTE: Company ID is not to be confused with AdobeOrg from your API configuration.  Company ID can be found from Adobe Analytics > Admin > All Admin > Company Settings > API Access.  Look for your `Global Company ID`
+> **Note:**
+> Company ID is not to be confused with AdobeOrg from your API configuration.  Company ID can be found from Adobe Analytics > Admin > All Admin > Company Settings > API Access.  Look for your `Global Company ID`
 
 Then, you can use the AdobeAPI class to interact with the Adobe Analytics API. Here's an example of how to initialize the API wrapper:
 
@@ -194,7 +195,7 @@ Because removing data from Adobe Analytics is very difficult, it performs two ch
 
 If neither of the exceptions is raised, the function proceeds with the bulk data insertion. If the request is successful, it returns the ingestion result. If not, it raises a RequestFailure exception with the status code and response text.
 
-> **Note**
+> **Note:**
 > If you're inserting historic data, be aware it can take up to 24 hours for the data to appear in Adobe Analytics. Unlike data recieved for the current day, which appears in the reports within an hour. See here for more details: https://experienceleague.adobe.com/docs/analytics/technotes/latency.html#features-that-depend-on-latency
 
 ## Ideas for Future Improvements
