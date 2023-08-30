@@ -17,7 +17,7 @@ This is a Python script for the Adobe Analytics API, which allows you to:
 
 ### Authentication
 
-This project connects to the Adobe APIs using Server-toServer OAuth authentication. See the [Adobe documentation](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation/) for information on how to set up a project and obtain your API credentials.
+This project connects to the Adobe APIs using Server-to-Server OAuth authentication. See the [Adobe documentation](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation/) for information on how to set up a project and obtain your API credentials.
 
 When that is done, you'll need to create a config.json file containing your Adobe API credentials:
 
