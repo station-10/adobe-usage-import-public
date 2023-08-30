@@ -105,7 +105,7 @@ adobe_api.write_to_csv_for_bulk_import(
 )
 ```
 
-This function writes the JSON data to a CSV file in the correct format for the Adobe Analytics Bulk Data Import API. It takes the paths to the JSON and CSV files and a your report suite id as input parameters. The function reads the JSON data and extracts relevant fields, converting some of them into the required formats. It then writes the extracted data to a CSV file.
+This function writes the JSON data to a CSV file in the correct format for the Adobe Analytics Bulk Data Import API. It takes the paths to the JSON and CSV files, and your report suite id (see below for setting this up) as input parameters. The function reads the JSON data and extracts relevant fields, converting some of them into the required formats. It then writes the extracted data to a CSV file.
 
 `data_sense_check`
 
@@ -196,6 +196,11 @@ If neither of the exceptions is raised, the function proceeds with the bulk data
 
 > **Note**
 > If you're inserting historic data, be aware it can take up to 24 hours for the data to appear in Adobe Analytics. Unlike data recieved for the current day, which appears in the reports within an hour. See here for more details: https://experienceleague.adobe.com/docs/analytics/technotes/latency.html#features-that-depend-on-latency
+
+## Ideas for Future Improvements
+
+- Remove the reliance on writing actual json and csv files out to disk, keep them in memory instead. Doing this while writing the script was helpful as it allowed easy debugging, but it makes automating the script in something like a Google Cloud Function difficult.
+- Add a script to automate the creation of the report suite, since creating all those events and evars is a faff.
 
 ## Useful Links
 
