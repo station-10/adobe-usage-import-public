@@ -24,11 +24,12 @@ When that is done, you'll need to create a config.json file containing your Adob
 ```json
 {
   "client_id": "YOUR_CLIENT_ID",
-  "secret": "YOUR_CLIENT_SECRET",
+  "client_secret": "YOUR_CLIENT_SECRET",
   "company_id": "YOUR_COMPANY_ID",
   "scopes": "comma, separated, list, of, scopes"
 }
 ```
+NOTE: Company ID is not to be confused with AdobeOrg from your API configuration.  Company ID can be found from Adobe Analytics > Admin > All Admin > Company Settings > API Access.  Look for your `Global Company ID`
 
 Then, you can use the AdobeAPI class to interact with the Adobe Analytics API. Here's an example of how to initialize the API wrapper:
 
