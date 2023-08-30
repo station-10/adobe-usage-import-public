@@ -70,7 +70,7 @@ class AdobeAPI:
         url = f"https://ims-na1.adobelogin.com/ims/token/v3?client_id={self.config['client_id']}"
 
         request_payload = {
-            "client_secret": self.config["secret"],
+            "client_secret": self.config["client_secret"],
             "grant_type": "client_credentials",
             "scope": self.config["scopes"],
         }
