@@ -82,7 +82,7 @@ This function updates the event types in the JSON file, from numbers to more des
 adobe_api.add_component_info("all_usage_audit_logs.json")
 ```
 
-This function reads the JSON file and adds component name, ID, and owner to each entry in the JSON data. These are extracted from the the eventDescription field of each entry based on a regex pattern. It then writes the updated JSON data back to the same file.
+This function reads the JSON file and adds component name, ID, and owner to each entry in the JSON data. These are extracted from the eventDescription field of each entry based on a regex pattern. It then writes the updated JSON data back to the same file.
 
 `add_adobe_events`
 
